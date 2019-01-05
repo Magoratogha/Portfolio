@@ -1,4 +1,4 @@
-# Welcome to my persolan portfolio as a developer
+# Welcome to my personal portfolio as a developer
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.0.5.
 
