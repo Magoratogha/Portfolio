@@ -1,4 +1,4 @@
-.center {
+.largeScreen {
     margin: 0;
     position: absolute;
     top: 50%;
@@ -6,6 +6,43 @@
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
 }
+
+@media (max-width: 575.98px) { 
+    .largeScreen {
+        display: none;
+    }
+    .smallScreen {
+        display: block;
+    }
+}
+
+@media (min-width: 575.98px) {
+    .largeScreen {
+        display: block;
+    }
+    .smallScreen {
+        display: none;
+    }
+}
+
+@media (max-height: 575.98px) { 
+    .largeScreen {
+        display: none;
+    }
+    .smallScreen {
+        display: block;
+    }
+}
+
+@media (min-height: 575.98px) {
+    .largeScreen {
+        display: block;
+    }
+    .smallScreen {
+        display: none;
+    }
+}
+
 
 .home {
     position: fixed;
