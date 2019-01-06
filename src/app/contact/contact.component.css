@@ -1,0 +1,47 @@
+.btn-instagram {
+    color: #fff;
+    background-color: #c1558b;
+    border-color: #c1558b;
+}
+
+.btn-instagram:hover {
+    color: #8a49a1;
+    background-color: #ffdf9e;
+    border-color: #ffdf9e;
+}
+
+.btn-instagram:focus, .btn-instagram.focus {
+    box-shadow: 0 0 0 0.2rem rgba(199, 163, 91, 0.5);
+}
+
+.btn-facebook {
+    color: #fff;
+    background-color: #3b5998;
+    border-color: #3b5998;
+}
+
+.btn-facebook:hover {
+    color: #3b5998;
+    background-color: #f8f9fa;
+    border-color: #f8f9fa;
+}
+
+.btn-facebook:focus, .btn-facebook.focus {  
+    box-shadow: 0 0 0 0.2rem rgba(216, 217, 219, 0.5);
+}
+
+.btn-github {
+    color: #212529;
+    background-color: #f8f9fa;
+    border-color: #f8f9fa;
+}
+
+.btn-github:hover {
+    color: #fff;
+    background-color: #2dba4e;
+    border-color: #2dba4e;
+}
+
+.btn-github:focus, .btn-github.focus {
+    box-shadow: 0 0 0 0.2rem rgba(28, 119, 49, 0.5);
+}
