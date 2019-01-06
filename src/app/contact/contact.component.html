@@ -30,18 +30,22 @@
   </div>
   <div class="row align-items-center">
     <div class="col-8">
-      <form>
+      <form (ngSubmit)="contactForm(form.value)" #form="ngForm">
         <div class="form-group">
           <label for="NameEmail">Your name</label>
-          <input type="text" class="form-control" id="NameEmail" placeholder="Enter your name">
+          <input type="text" class="form-control" id="NameEmail" name="nombre" placeholder="Enter your name" ngModel>
+        </div>
+        <div class="form-group">
+          <label for="SubjectEmail">Subject</label>
+          <input type="text" class="form-control" id="SubjectEmail" name="asunto" placeholder="Enter your subject" ngModel>
         </div>
         <div class="form-group">
           <label for="Email">Your email address</label>
-          <input type="email" class="form-control" id="Email" placeholder="name@example.com">
+          <input type="email" class="form-control" id="Email" name="email" placeholder="name@example.com" ngModel>
         </div>
         <div class="form-group">
           <label for="exampleFormControlTextarea1">Your message</label>
-          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="mensaje" ngModel></textarea>
         </div>
         <div class="form-group row justify-content-center">
           <div class="col-4">
@@ -50,7 +54,7 @@
         </div>
       </form>
     </div>
-    <div class="col-4">
+    <div class="col-4 pl-5">
       <h1 class="text-center font-weight-light" style="color: #d9534f;">Thanks for your visit c:</h1>
     </div>
   </div>
