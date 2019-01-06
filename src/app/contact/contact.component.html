@@ -33,19 +33,31 @@
       <form (ngSubmit)="contactForm(form.value)" #form="ngForm">
         <div class="form-group">
           <label for="NameEmail">Your name</label>
-          <input type="text" class="form-control" id="NameEmail" name="nombre" placeholder="Enter your name" ngModel>
+          <input [(ngModel)]="name" type="text" class="form-control" [ngClass]="{'is-invalid' : nameIsValid == false}" id="NameEmail" name="nombre" placeholder="Enter your name">
+          <div class="invalid-feedback">
+            Please enter your name.
+          </div>
         </div>
         <div class="form-group">
           <label for="SubjectEmail">Subject</label>
-          <input type="text" class="form-control" id="SubjectEmail" name="asunto" placeholder="Enter your subject" ngModel>
+          <input [(ngModel)]="subject" type="text" class="form-control" [ngClass]="{'is-invalid' : subjectIsValid == false}" id="SubjectEmail" name="asunto" placeholder="Enter your subject">
+          <div class="invalid-feedback">
+            Please enter your subject.
+          </div>
         </div>
         <div class="form-group">
           <label for="Email">Your email address</label>
-          <input type="email" class="form-control" id="Email" name="email" placeholder="name@example.com" ngModel>
+          <input [(ngModel)]="email" type="email" class="form-control" [ngClass]="{'is-invalid' : emailIsValid == false}" id="Email" name="email" placeholder="name@example.com">
+          <div class="invalid-feedback">
+            Please enter your email.
+          </div>
         </div>
         <div class="form-group">
-          <label for="exampleFormControlTextarea1">Your message</label>
-          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="mensaje" ngModel></textarea>
+          <label for="emailMessage">Your message</label>
+          <textarea [(ngModel)]="message" class="form-control" [ngClass]="{'is-invalid' : messageIsValid == false}" id="emailMessage" rows="3" name="mensaje"></textarea>
+          <div class="invalid-feedback">
+            Please enter your message.
+          </div>
         </div>
         <div class="form-group row justify-content-center">
           <div class="col-4">

@@ -9,20 +9,37 @@ import swal from 'sweetalert';
 })
 export class ContactComponent implements OnInit {
 
+  name: string;
+  subject: string;
+  email: string;
+  message: string;
+
+  nameIsValid: boolean;
+  subjectIsValid: boolean;
+  emailIsValid: boolean;
+  messageIsValid: boolean;
+
   constructor(public _MessageService: MessageService) { }
 
   ngOnInit() {
   }
 
   contactForm(form) {
-    this._MessageService.sendMessage(form).subscribe(() => {
-      swal({
-        title: 'Alright!',
-        text: 'Your message has been sended',
-        icon: 'success',
-        dangerMode: true
+    this.nameIsValid = this.name ? true : false;
+    this.subjectIsValid = this.subject ? true : false;
+    this.emailIsValid = this.email ? true : false;
+    this.messageIsValid = this.message ? true : false;
+
+    if (this.nameIsValid && this.subjectIsValid && this.emailIsValid && this.messageIsValid) {
+      this._MessageService.sendMessage(form).subscribe(() => {
+        swal({
+          title: 'Alright!',
+          text: 'Your message has been sended',
+          icon: 'success',
+          dangerMode: true
+        });
       });
-    });
+    }
   }
 
 }
