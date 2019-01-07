@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -29,7 +30,8 @@ import { MessageService } from './services/email.service';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule
   ],
   providers: [MessageService],
   bootstrap: [AppComponent]

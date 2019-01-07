@@ -6,10 +6,10 @@ import { SkillsComponent } from '../app/skills/skills.component';
 import { ContactComponent } from '../app/contact/contact.component';
 
 const routes: Routes = [
-  { path: 'home', component: HomeComponent },
-  { path: 'about', component: AboutComponent },
-  { path: 'skills', component: SkillsComponent },
-  { path: 'contact', component: ContactComponent },
+  { path: 'home', component: HomeComponent, data: {state: 'HomePage'} },
+  { path: 'about', component: AboutComponent, data: {state: 'AboutPage'} },
+  { path: 'skills', component: SkillsComponent, data: {state: 'SkillsPage'} },
+  { path: 'contact', component: ContactComponent, data: {state: 'ContactPage'} },
   { path: '**', pathMatch: 'full', redirectTo: 'home' }
 ];
 
