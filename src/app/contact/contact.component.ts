@@ -31,10 +31,16 @@ export class ContactComponent implements OnInit {
     this.messageIsValid = this.message ? true : false;
 
     if (this.nameIsValid && this.subjectIsValid && this.emailIsValid && this.messageIsValid) {
+      swal('Sending your message...',
+      {
+        closeOnEsc: false,
+        closeOnClickOutside: false,
+        buttons: [false]
+      });
       this._MessageService.sendMessage(form).subscribe(() => {
         swal({
           title: 'Alright!',
-          text: 'Your message has been sended',
+          text: 'Your message has been sent.',
           icon: 'success',
           dangerMode: true
         });
