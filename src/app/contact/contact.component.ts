@@ -31,7 +31,7 @@ export class ContactComponent implements OnInit {
     this.messageIsValid = this.message ? true : false;
 
     if (this.nameIsValid && this.subjectIsValid && this.emailIsValid && this.messageIsValid) {
-      swal('Sending your message...',
+      swal('Please wait, we are sending your message... C:',
       {
         closeOnEsc: false,
         closeOnClickOutside: false,
